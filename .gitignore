@@ -1,0 +1,31 @@
+# Python cache files
+__pycache__/
+
+# Python compiled bytecode
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# Dependency directories
+lib/
+libs/
+dist/
+build/
+
+# IDE-specific files and directories
+.idea/
+.vscode/
+*.pydevproject
+
+# Project-specific files and directories
+*.env
+*.log
+
+# Ignore sensitive or environment-specific information
+secrets.yaml
+config.ini
+credentials.json

@@ -102,7 +102,6 @@ def create_new_post(driver, title, text):
 
     time.sleep(2)
 
-
 def home(driver):
     home_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, 'body > section > header > section > section > div.container > section > div:nth-child(1) > a > svg'))
@@ -114,8 +113,6 @@ def home(driver):
     time.sleep(5)
 
 
-    
-    
 
 # Retrieve the email & password from the environment variable
 virgool_email = os.environ.get('VIRGOOL_EMAIL')
@@ -126,11 +123,11 @@ text = os.environ.get('VIRGOOL_TEXT')
 
 # If the environment variable is not set, prompt the user to enter the email & password
 if not virgool_email:
-    virgool_email = getpass('Enter your Virgool.io email: ')
+    virgool_email = input('Enter your Virgool.io email: ')
 
 if not virgool_password:
     virgool_password = getpass('Enter your Virgool.io password: ')  
-
+#mr4^2WZ7I1GDi8
 if not title:
     title = input('Enter a title: ')
 
