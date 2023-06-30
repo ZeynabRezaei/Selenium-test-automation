@@ -10,6 +10,7 @@ def login_to_snapp():
     driver = webdriver.Chrome()
     driver.get("https://snapp.ir")
 
+    time.sleep(10)
     login_button = WebDriverWait(driver, 5).until(
         EC.element_to_be_clickable((By.XPATH, '/html/body/div/div/div/main/section[1]/div[1]/div[3]/a/button'))
     )
