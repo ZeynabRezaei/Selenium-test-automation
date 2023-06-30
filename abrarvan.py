@@ -34,6 +34,9 @@ def login_to_abrarvan():
     signin_submit_button.click()
     time.sleep(30)
 
+    return driver
+
+def new_dns_record(driver):
     # //*[@id="aside_menu_cdn_button"]/div[2]/div[1]
     cdn_button = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.ID, 'aside_menu_cdn_button'))
@@ -90,6 +93,62 @@ def login_to_abrarvan():
     )
     save_records_button.click()
 
-    return driver
+def new_cloud(driver):
+    # //*[@id="aside_menu_server_button"]/div[2]/div[2]
+    server_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.ID, 'aside_menu_server_button'))
+    )
+    server_button.click()
+
+    time.sleep(40)
+    # 
+    new_server_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[3]/div/div/a/div[1]'))
+    )
+    new_server_button.click()
+    # //*[@id="root"]/div/div[3]/div/div[2]/div/div[3]/footer/div/div[2]/div/div[2]/button/div[1]
+    time.sleep(20)
+
+    next_server_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[3]/div/div[2]/div/div[3]/footer/div/div[2]/div/div[2]/button/div[1]'))
+    )
+    next_server_button.click()
+    time.sleep(20)
+
+    next2_server_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[3]/div/div[2]/div/div[3]/footer/div/div[2]/div/div[2]/button/div[1]'))
+    )
+    next2_server_button.click()
+    time.sleep(20)
+
+    next3_server_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[3]/div/div[2]/div/div[3]/footer/div/div[2]/div/div[2]/button/div[1]'))
+    )
+    next3_server_button.click()
+    time.sleep(20)
+
+    next4_server_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[3]/div/div[2]/div/div[3]/footer/div/div[2]/div/div[2]/button'))
+    )
+    next4_server_button.click()
+    time.sleep(20)
+
+    next5_server_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[3]/div/div[2]/div/div[3]/footer/div/div[2]/div/div[2]/button/div[1]'))
+    )
+    next5_server_button.click() 
+    time.sleep(20)
+
+
+    # //*[@id="root"]/div/div[3]/div/div[2]/div/div[3]/footer/div/div[2]/div/div[2]/button
+
+    next6_server_button = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div[3]/div/div[2]/div/div[3]/footer/div/div[2]/div/div[2]/button'))
+    )
+    next6_server_button.click() 
+    time.sleep(50)
+
 
 driver = login_to_abrarvan()
+# new_dns_record(driver)
+new_cloud(driver)
